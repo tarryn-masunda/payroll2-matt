@@ -35,7 +35,6 @@
             <!-- Navigation links -->
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item"><a class="nav-link active" aria-current="page" href="dashboard.html">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="employee.html">Employee Information</a></li>
                 <li class="nav-item"><a class="nav-link" href="payrollcalc.html" >Payroll Simulator</a></li>
                 <li class="nav-item"><a class="nav-link" href="attendtimeoff.html">Attendance/Time Off</a></li>
                 <!-- Dropdown Menu -->
@@ -45,9 +44,8 @@
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="employeeDropdown">
                         <li><a class="dropdown-item" href="employee.html">Employee Data</a></li>
-                        <li><a class="dropdown-item" href="Attendance.html">Attendance</a></li>
-                        <li><a class="dropdown-item" href="performance.html">Performance</a></li>
-                        <li><a class="dropdown-item" href="Leave.html">Data</a></li>
+                        <li><a class="dropdown-item" href="./performance-form.html">Performance</a></li>
+                        <li><a class="dropdown-item" href="leave.chart.html">Data</a></li>
                     </ul>
                   <li class="nav-item"><a class="nav-link" href="login.html" style="color:red;">Log Out</a></li>
 
@@ -63,9 +61,16 @@
   </nav>
     <!-- Main Content -->
     <main>
-        <h2 class="text-center mb-4">Employee Information</h2>
+        <h2 class="text-center mb-4">Employee Data</h2>
+        <!-- buttons  -->
         <div class="text-end mb-3">
             <button class="btn btn-primary" type="button" onclick="addNewEmployee()">Add New</button>
+        </div>
+        <div class="text-end mb-3">
+            <button class="btn btn-primary" type="button" onclick="./attendtimeoff.html">Attendance</button>
+        </div>
+        <div class="text-end mb-3">
+            <button class="btn btn-primary" type="button" onclick="leave.html">Leave</button>
         </div>
         <table class="table table-striped table-hover">
             <thead>
@@ -84,30 +89,15 @@
     </main>
 
     <!-- Footer Section -->
-    <footer class="footer bg-light mt-5">
-        <div class="footer-top text-center py-3">
-            <p>&copy; 2024 ModernTech Solutions</p>
-            <p>Innovating Healthcare with Technology</p>
-            <h4>Quick Links</h4>
-            <ul class="list-inline">
-                <li class="list-inline-item"><a href="about.html">About Us</a></li>
-                <li class="list-inline-item"><a href="services.html">Services</a></li>
-                <li class="list-inline-item"><a href="contact.html">Contact</a></li>
-                <li class="list-inline-item"><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li class="list-inline-item"><a href="terms-of-service.html">Terms of Service</a></li>
-            </ul>
-        </div>
-        <div class="footer-bottom text-center py-2">
-            <h4>Follow Us</h4>
-            <div class="footer-images">
-                <a href="https://facebook.com" target="_blank"><img src="./images/facebook.png" alt="Facebook" class="footer-icon"></a>
-                <a href="https://twitter.com" target="_blank"><img src="./images/twitter.png" alt="Twitter" class="footer-icon"></a>
-                <a href="https://linkedin.com" target="_blank"><img src="./images/linkedin.png" alt="LinkedIn" class="footer-icon"></a>
-                <a href="https://instagram.com" target="_blank"><img src="./images/instagram.png" alt="Instagram" class="footer-icon"></a>
-                <a href="https://tiktok.com" target="_blank"><img src="./images/tiktok.png" alt="TikTok" class="footer-icon"></a>
-            </div>
-        </div>
-    </footer>
+    <section class="footer">
+        <!-- <div class="footer-top">
+          <p>© 2024 ModernTech Solutions</p>
+          <p>Innovating Healthcare with Technology</p>
+          <br> -->
+          <div class="footer-bottom">
+            <p>&copy; 2024 ModernTech Solutions. All rights reserved.</p>
+          </div>
+        </section>
 
     <!-- JavaScript -->
     <script src="./js/index.js"></script>

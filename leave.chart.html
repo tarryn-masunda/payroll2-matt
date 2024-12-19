@@ -154,49 +154,6 @@
 </script>
 
 
-<h2>Attendance</h2>
-<canvas id="attendanceChart" width="600" height="400"></canvas>
-
-<script>
-    const attendanceData = {
-        labels: ["Present", "Absent", "Late", "On Leave"],
-        datasets: [{
-            label: "Attendance Status",
-            data: [150, 20, 10, 5], // Example data
-            backgroundColor: [
-                "rgba(75, 192, 192, 0.6)",
-                "rgba(255, 99, 132, 0.6)",
-                "rgba(255, 206, 86, 0.6)",
-                "rgba(54, 162, 235, 0.6)"
-            ],
-            borderColor: [
-                "rgba(75, 192, 192, 1)",
-                "rgba(255, 99, 132, 1)",
-                "rgba(255, 206, 86, 1)",
-                "rgba(54, 162, 235, 1)"
-            ],
-            borderWidth: 1
-        }]
-    };
-
-    const attendanceConfig = {
-        type: 'pie',
-        data: attendanceData,
-        options: {
-            responsive: true,
-            plugins: {
-                legend: {
-                    display: true,
-                    position: 'top'
-                }
-            }
-        }
-    };
-
-    new Chart(document.getElementById('attendanceChart'), attendanceConfig);
-</script>
-        <script src="./app.js"></script>
-        <script src="./graph.js"></script>
 
 </body>
 </html>
