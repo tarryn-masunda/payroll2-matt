@@ -1,0 +1,1174 @@
+/* Background of the login page */
+.login-body {
+  background-image: url("/img/a\ sleeek.webp"); /* Sets background image for the login page */
+}
+
+/* Styling for all images */
+img {
+  border-radius: 50%; /* Makes images circular */
+  border: solid; /* Adds a solid border around the image */
+}
+
+/* Specific styling for elements with the .image class */
+.image {
+  border-radius: 50%; /* Makes images circular */
+  border: solid; /* Adds a solid border around the image */
+}
+
+/* Container that holds the login form */
+.container {
+  width: 360px; /* Sets the width of the container */
+  height: 400px; /* Sets the height of the container */
+  background-color: white; /* Sets background color to white */
+  background-repeat: no-repeat; /* Prevents background image from repeating */
+  position: absolute; /* Positions the container absolutely */
+  top: 50%; /* Centers the container vertically */
+  left: 50%; /* Centers the container horizontally */
+  transform: translate(-50%, -50%); /* Further adjusts to center the container */
+  color: white; /* Sets text color inside the container to white */
+  text-align: center; /* Centers the text inside the container */
+  border-radius: 14px; /* Rounds the corners of the container */
+  border-style: solid; /* Adds a solid border around the container */
+  border-color: white; /* Sets the border color to white */
+  opacity: 1; /* Ensures the container is fully opaque */
+}
+
+/* Textbox styling for input fields */
+.textbox {
+  width: 260px; /* Sets width of the textbox */
+  height: 40px; /* Sets height of the textbox */
+  background: #F1F1F1B3; /* Sets background color with some transparency */
+  border-radius: 10px; /* Rounds the corners of the textbox */
+  border-style: solid; /* Adds a solid border to the textbox */
+  margin: 10px auto; /* Adds margin around the textbox */
+  transition: .25s; /* Smooth transition for changes */
+}
+
+/* Styling for the text input inside the textbox */
+.textbox input {
+  background: none; 
+  border: none; 
+  outline: none; 
+  text-align: center; 
+  width: 90%; /* Sets the width of the input field */
+  line-height: 37px; /* Sets the height of the text line */
+  font-family: "Montsrerrat", sans-serif; /* Sets the font for the input text */
+  font-size: 14px; /* Sets font size for the input text */
+  color: #333; /* Sets the color of the input text */
+}
+
+/* Styling for the button */
+.button {
+  width: 260px; /* Sets width of the button */
+  height: 40px; /* Sets height of the button */
+  background: #42d4f5; /* Sets the button background color */
+  border-radius: 10px; /* Rounds the corners of the button */
+  margin: 14px auto; /* Adds margin around the button */
+  display: block; /* Ensures the button is a block element */
+  font-family: "Montsrerrat", sans-serif; /* Sets the font for the button */
+  font-size: 16px; /* Sets font size for the button text */
+  border: none; /* Removes borders from the button */
+  color: white; /* Sets the button text color to white */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+  transition: 0.4s all; /* Smooth transition for any changes */
+}
+
+/* Message box that appears under the login form */
+.message {
+  background-color: white; /* Sets background color for the message box */
+  position: absolute; /* Positions the message box absolutely */
+  top: 100%; /* Positions the message box right below the container */
+  left: 0.5%; /* Offsets the message box from the left */
+  text-align: center; /* Centers the text inside the message box */
+  padding: 2% 4%; /* Adds padding around the message box content */
+  display: none; /* Hides the message box initially */
+  border: 2px solid black; /* Adds a solid black border around the message box */
+  border-radius: 5%; /* Rounds the corners of the message box */
+}
+
+/* Global body styles */
+body {
+  font-family: 'SF Pro Display', '-apple-system,' 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Open Sans', 'Helvetica Neue', sans-serif; /* Sets the font for the body */
+  background-color: #f7f7f7; /* Sets a light gray background color */
+  margin: 0; /* Removes margin around the body */
+  padding: 0; /* Removes padding around the body */
+}
+
+/* Background video styling */
+.background-video {
+  width: 100%; /* Makes the video fill the width of the container */
+  height: 100vh; /* Makes the video fill the entire height of the viewport */
+  display: flex; /* Uses flexbox to center the content */
+  align-items: center; /* Vertically centers content inside the video */
+  justify-content: center; /* Horizontally centers content inside the video */
+  position: relative; /* Ensures other elements can be positioned on top of the video */
+  overflow: hidden; /* Prevents overflow of video outside the container */
+}
+
+/* Ensures the video covers the entire viewport */
+.background-clip {
+  position: absolute; /* Positions the video absolutely */
+  top: 0; /* Positions the video at the top of the container */
+  left: 0; /* Positions the video at the left of the container */
+  
+  object-fit: cover; /* Ensures the video covers the entire container without distortion */
+  z-index: -1; 
+}
+
+/* Content overlay */
+.content {
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1; /* Ensure content is above the video */
+}
+
+/* Header text styles inside .content */
+.content h2 {
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5); /* Slight background for readability */
+  color: white;
+}
+
+/* Subheader text styles inside .content */
+.content h3 {
+  font-size: 30px;
+  margin: 50px 0;
+  padding: 15px 25px;
+  border-radius: 50px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+/* Link styles inside .content */
+.content a {
+  color: lightseagreen;
+  font-size: 25px;
+  border: 2px solid #fff;
+  padding: 15px 25px;
+  border-radius: 50px;
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+/* Link hover effect */
+.content a:hover {
+  background-color: lightseagreen;
+  color: #fff; /* Change text color on hover */
+  border-color: lightseagreen;
+}
+
+/* Grid container for card layout */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 4-column grid */
+  gap: 20px; /* Adds space between items */
+  padding: 20px; /* Adds padding inside the grid */
+  align-items: flex-start; /* Aligns items at the start of the grid */
+}
+
+/* Card styling */
+.card {
+  background: #ffffff;
+  border: 2px solid #405766;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Header inside the card */
+.card .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+/* Title inside the card */
+.card-title {
+  font-size: 1.2rem;
+  color: #405766;
+  font-weight: bold;
+}
+
+/* Text inside the card */
+.card-text {
+  font-size: 16px;
+  color: #555; 
+}
+
+/* Card paragraph text styling */
+.card p {
+  color: #555;
+}
+
+/* Card header font style */
+.card h5 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* Body of each individual card */
+.card-body {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: auto; 
+  max-width: 100%; 
+  min-width: 300px; 
+}
+
+/* Link to see all items from the card */
+.see-all {
+  font-size: 14px;
+  color: #007AFF; 
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Link hover effect */
+.see-all:hover {
+  text-decoration: underline;
+  color: #007AFF;
+}
+
+/* Styling for Work Attendance section */
+.work-atten h1 {
+  margin: 50px;
+  font-size: 50px;
+  padding: 15px 25px;
+  border-radius: 50px;
+}
+
+/* Progress Circle (iOS Style) */
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+}
+
+/* Rotates the progress circle for animation effect */
+.progress-circle svg {
+  transform: rotate(-90deg); /* Rotate for progress effect */
+}
+
+/* Background of the progress circle */
+.progress-background {
+  fill: none;
+  stroke: #e5e5e5; /* Light gray background */
+  stroke-width: 10;
+}
+
+/* Value of the progress circle */
+.progress-value {
+  fill: none;
+  stroke: #007AFF ; /* iPhone blue for progress */
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 0.3s ease;
+}
+
+/* Text inside the progress circle */
+.progress-circle .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 18px;
+  color: #333;
+  text-align: center;
+}
+
+/* iPhone Navbar styling */
+.navbar {
+  background: linear-gradient(135deg, #dbe2ef, #ffffff, #e0eaf5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Navbar brand styling */
+.navbar-brand {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Additional form control styling */
+input.form-control.mt-3 {
+  padding: 10px,5px;
+  margin: 5px,10px,5px;
+}
+
+/* Card title styling */
+.card-title {
+  font-size: 20px;
+}
+
+/* Chart layout */
+.chart {
+  margin-bottom: 16px;
+}
+
+div.chart {
+  margin: 16px;
+}
+
+/* Text styling inside the card */
+p.card-text {
+  margin: 10px,10px,10px,10px;
+}
+
+/* Button styling */
+button.btn.btn-primary {
+  padding: 12px;
+  margin: 0 auto;
+  display: block;
+  margin-top: -10px;
+  background-color: #5F7C8A;
+  border: 2px solid black;
+}
+
+/* Global body text styling */
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Chart container styling */
+.chart {
+  margin: 50px auto;
+  min-width: none;
+}
+
+/* Text styling in the chart */
+text {
+  font-size: 14px;
+  fill: #fff;
+}
+
+/* Card for time off details */
+.card-time-off {
+  width: 20rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+/* Progress circle styling */
+.progress-circle {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+/* Rotates the progress circle for animation effect */
+.progress-circle svg {
+  transform: rotate(-90deg);
+}
+
+/* Progress circle value styling */
+.progress-circle .progress-value {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+/* Progress circle background styling */
+.progress-circle .progress-background {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 10;
+}
+
+/* Text inside the progress circle */
+.progress-circle .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  font-weight: bold;
+}
+/* iPhone Navbar */
+.navbar {
+  background: linear-gradient(135deg, #dbe2ef, #ffffff, #e0eaf5); /* Gradient background for the navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for the navbar */
+}
+
+.navbar-brand {
+  font-size: 20px; /* Font size for the brand name */
+  font-weight: bold; /* Bold font for the brand */
+  color: #333; /* Dark color for the brand text */
+}
+
+/* Form Control */
+input.form-control.mt-3 {
+  padding: 10px, 5px; /* Padding inside the input field */
+  margin: 5px, 10px, 5px; /* Margin around the input field */
+}
+
+/* Card Title */
+.card-title {
+  font-size: 20px; /* Font size for the card titles */
+}
+
+/* Chart */
+.chart {
+  margin-bottom: 16px; /* Margin below the chart */
+}
+
+div.chart {
+  margin: 16px; /* Margin around the chart */
+}
+
+/* Card Text */
+p.card-text {
+  margin: 10px, 10px, 10px, 10px; /* Margin around the card text */
+}
+
+/* Primary Button */
+button.btn.btn-primary {
+  padding: 12px; /* Padding inside the button */
+  margin: 0 auto; /* Center the button */
+  display: block; /* Makes the button a block element */
+  margin-top: -10px; /* Negative margin to adjust position */
+  background-color: #5F7C8A; /* Background color for the button */
+  border: 2px solid black; /* Black border around the button */
+}
+
+/* General Body */
+body {
+  font-family: Arial, sans-serif; /* Font style for the body */
+  text-align: center; /* Center-align the body text */
+  padding-top: 70px;
+}
+
+/* Chart Styling */
+.chart {
+  margin: 50px auto; /* Center the chart with margin */
+  min-width: none; /* Remove the minimum width */
+}
+
+/* Text */
+text {
+  font-size: 14px; /* Font size for the text */
+  fill: #fff; /* White color for text */
+}
+
+/* Time-Off Card */
+.card-time-off {
+  width: 20rem; /* Width of the time-off card */
+  border: 1px solid #e0e0e0; /* Border around the card */
+  border-radius: 10px; /* Rounded corners for the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+  padding: 20px; /* Padding inside the card */
+}
+
+/* Progress Circle */
+.progress-circle {
+  position: relative; /* Position for the progress circle */
+  width: 100px; /* Width of the circle */
+  height: 100px; /* Height of the circle */
+  margin: 0 auto; /* Center the progress circle */
+}
+
+.progress-circle svg {
+  transform: rotate(-90deg); /* Rotate the SVG for progress effect */
+}
+
+.progress-circle .progress-value {
+  fill: none; /* Remove fill for the progress value */
+  stroke-width: 10; /* Set the stroke width */
+  stroke-linecap: round; /* Round stroke end */
+}
+
+.progress-circle .progress-background {
+  fill: none; /* Remove fill for the background */
+  stroke: #e0e0e0; /* Light gray stroke for the background */
+  stroke-width: 10; /* Set the stroke width for the background */
+}
+
+.progress-circle .text {
+  position: absolute; /* Position text inside the circle */
+  top: 50%; /* Vertically center the text */
+  left: 50%; /* Horizontally center the text */
+  transform: translate(-50%, -50%); /* Fine-tune the centering */
+  font-size: 20px; /* Font size for the text */
+  font-weight: bold; /* Bold text inside the circle */
+}
+
+/* Time-Off Item */
+.time-off-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align items */
+  justify-content: space-between; /* Space between items */
+  margin: 10px 0; /* Margin between time-off items */
+}
+
+.time-off-item span {
+  font-size: 14px; /* Font size for the time-off span */
+  font-weight: bold; /* Bold font for the span text */
+}
+
+/* Calendar */
+.calendar {
+  display: flex; /* Use flexbox for the calendar layout */
+  justify-content: space-around; /* Space out the calendar items */
+  align-items: center; /* Vertically center the calendar items */
+  margin-top: 10px; /* Margin on top of the calendar */
+}
+
+/* Small Button */
+.btn-small {
+  background: #405766; /* Background color for small buttons */
+  color: #fff; /* White text color */
+  padding: 5px 10px; /* Padding inside the button */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+.btn-small:hover {
+  background: #6A5ACD; /* Change background on hover */
+}
+
+/* Time-Off Item */
+.time-off-item {
+  text-align: left; /* Align text to the left */
+  margin-top: 10px; /* Margin on top of the time-off item */
+}
+
+/* Badge */
+.badge {
+  padding: 5px 8px; /* Padding inside the badge */
+  border-radius: 5px; /* Rounded corners for the badge */
+  font-size: 0.8rem; /* Font size for the badge text */
+}
+
+.badge.pending {
+  background: #ffc107; /* Yellow background for pending badges */
+  color: #333; /* Dark color for the text */
+}
+
+.badge.confirmed {
+  background: #28a745; /* Green background for confirmed badges */
+}
+
+/* Inside Schedule Card */
+.inside-schedule-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  padding: 25px; 
+  width: 400px; 
+  font-family: Arial, sans-serif; 
+  border: 1px solid #007aff; 
+}
+
+/* Inside Time-Off Card */
+.inside-timeoff-card {
+  background: #fff; /* White background for the time-off card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+  padding: 50px; /* Padding inside the card */
+  font-family: Arial, sans-serif; /* Font for the text */
+  border: 1px solid #007aff; /* Blue border for the card */
+}
+
+/* Inside Attendance Card */
+.inside-attendance-card {
+  background: #fff; /* White background for the attendance card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+  padding: 25px; /* Padding inside the card */
+  font-family: Arial, sans-serif; /* Font for the text */
+  border: 1px solid #007aff; /* Blue border for the card */
+}
+
+/* Inside Employee Card */
+.inside-employee-card {
+  background: #fff; /* White background for the employee card */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow for the card */
+  padding: 25px; /* Padding inside the card */
+  width: 400px; /* Set width of the card */
+  font-family: Arial, sans-serif; /* Font for the text */
+  border: 1px solid #007aff; /* Blue border for the card */
+}
+
+/* Header */
+.header {
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Space out the header content */
+  align-items: center; /* Vertically align the header items */
+  border-bottom: 1px solid #eee; /* Border at the bottom of the header */
+  padding-bottom: 10px; /* Padding below the header */
+  margin-bottom: 15px; /* Margin below the header */
+}
+
+.header h5 {
+  margin: 0; /* Remove margin for header text */
+  font-size: 18px; /* Font size for the header text */
+}
+
+.header .see-all {
+  font-size: 14px; /* Font size for the "see all" link */
+  color: #007AFF; /* Blue color for the link */
+  text-decoration: none; /* Remove underline from the link */
+}
+
+/* Employee Section */
+.employee-section {
+  margin-bottom: 15px; /* Margin below the employee section */
+}
+
+.employee-section h6 {
+  font-size: 14px; /* Font size for the employee section header */
+  font-weight: bold; /* Bold font for the header */
+  color: #333; /* Dark color for the header text */
+  margin-bottom: 10px; /* Margin below the section header */
+}
+
+/* Employee Item */
+.employee-item {
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically align the items */
+  margin-bottom: 10px; /* Margin below each employee item */
+}
+
+.employee-item .avatar {
+  width: 40px; /* Width of the avatar */
+  height: 40px; /* Height of the avatar */
+  border-radius: 50%; /* Make the avatar circular */
+  margin-right: 10px; /* Margin on the right of the avatar */
+}
+
+/* Employee Info */
+.employee-info {
+  flex: 1; /* Allow the info to take the remaining space */
+}
+
+.employee-info p {
+  margin: 0; /* Remove margin from paragraphs */
+  font-size: 14px; /* Font size for the employee info */
+  color: #555; /* Light color for the text */
+}
+
+.employee-info p strong {
+  font-size: 15px; /* Font size for bold text in employee info */
+}
+
+/* Replacement Info */
+.employee-info .replacement {
+  font-size: 12px; /* Font size for the replacement text */
+  color: #999; /* Light color for the replacement text */
+}
+
+/* Employee Badge */
+.employee-badge {
+  font-size: 12px; /* Font size for the employee badge */
+  background: #f5f5f5; /* Light background for the badge */
+  color: #555; /* Dark color for the badge text */
+  padding: 5px 10px; /* Padding inside the badge */
+  border-radius: 15px; /* Rounded corners for the badge */
+}
+
+/* Employee Time-Off */
+.employee-time {
+  font-size: 12px; /* Font size for the time-off badge */
+  color: #fff; /* White text color */
+  background: #f76c6c; /* Red background for the time-off badge */
+  padding: 5px 10px; /* Padding inside the badge */
+  border-radius: 15px; /* Rounded corners for the badge */
+  font-weight: bold; /* Bold font for the time-off text */
+}
+
+/* Footer Styling */
+.footer {
+  background: linear-gradient(135deg, #dbe2ef, #e0eaf5, black); /* Gradient background for footer */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow for footer */
+  color: #fff; /* White text color */
+  padding: 40px 0; /* Padding inside the footer */
+  text-align: center; /* Center-align footer text */
+}
+
+.footer-top {
+  display: flex; /* Use flexbox for footer top layout */
+  flex-wrap: wrap; /* Wrap items if necessary */
+  justify-content: space-between; /* Space out the footer sections */
+  max-width: 1200px; /* Max width for the footer sections */
+  margin: 0 auto; /* Center-align the footer */
+  gap: 20px; /* Gap between the footer sections */
+}
+
+.footer-top h4, p {
+  color: black; /* Set color for heading and paragraph */
+}
+
+.footer-top ul li {
+  list-style: none; /* Remove list bullets */
+}
+
+.footer-info {
+  flex: 1 1 30%; /* Flexible footer info section */
+}
+
+.footer-info p {
+  margin-bottom: 10px; /* Margin below the paragraph */
+}
+
+.footer-links, .footer-social {
+  flex: 1 1 30%; /* Flexible footer link and social sections */
+}
+
+.footer-links h4, .footer-social h4 {
+  margin-bottom: 10px; /* Margin below the section header */
+  font-size: 18px; /* Font size for section titles */
+}
+
+.footer-links ul {
+  list-style: none; /* Remove list bullets */
+  padding: 0; /* Remove padding from list */
+}
+
+.footer-links ul li {
+  margin: 10px 0; /* Margin between each list item */
+}
+
+/* Footer Links */
+.footer-links a {
+  color: black; /* Black text color for links */
+  text-decoration: none; /* Remove underline from links */
+  font-size: 16px; /* Set font size for links */
+}
+
+/* Footer Links Hover Effect */
+.footer-links a:hover {
+  color: #405766; /* Change color to lightseagreen on hover */
+}
+
+/* Footer Social Media Icons */
+.footer-social .footer-images {
+  display: flex; /* Use flexbox for layout */
+  justify-content: center; /* Center the social media icons */
+  gap: 20px; /* Space between icons */
+}
+
+/* Footer Icon */
+.footer-icon {
+  width: 40px; /* Set width for footer icons */
+  height: 40px; /* Set height for footer icons */
+  transition: transform 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover Effect for Footer Icon */
+.footer-icon:hover {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+  background-color: #222; /* Dark background color */
+  padding: 20px 0; /* Padding around the footer */
+}
+
+/* Footer Bottom Text */
+.footer-bottom p {
+  margin: 0; /* Remove margin from text */
+  font-size: 14px; /* Font size for footer text */
+}
+
+/* Main Content */
+.main-content {
+    flex: 1; /* Allow main content to take up remaining space */
+    padding: 20px; /* Padding inside the main content */
+}
+
+/* Header */
+header {
+    display: flex; /* Use flexbox for header layout */
+    justify-content: space-between; /* Space out the header elements */
+    align-items: center; /* Vertically align header items */
+    margin-bottom: 20px; /* Margin below the header */
+}
+
+/* Header Title */
+header h1 {
+    color: #333; /* Dark color for the header title */
+}
+
+/* Header Button */
+header button {
+    padding: 10px 20px; /* Padding inside the button */
+    background-color: #007b5e; /* Green background color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Employee File Title */
+h2 {
+  margin-bottom: 10px; /* Margin below the title */
+  color: #444; /* Dark color for the title */
+}
+
+/* Card Section */
+.card-section {
+  margin-bottom: 30px; /* Margin below the card section */
+}
+
+/* Meeting Card */
+.meeting-card {
+  border-radius: 10px; /* Rounded corners for the meeting card */
+  padding: 15px; /* Padding inside the card */
+  margin-bottom: 15px; /* Margin below the card */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  color: #333; /* Dark text color inside the card */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+
+}
+
+/* Hover effect for meeting cards */
+.meeting-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Header */
+.card-header {
+  display: flex; /* Use flexbox for card header layout */
+  justify-content: space-between; /* Space out header elements */
+  align-items: center; /* Vertically align header items */
+}
+
+/* Card Header Title */
+.card-header h3 {
+  margin: 0; /* Remove margin from header */
+  font-size: 16px; /* Set font size for header title */
+}
+
+/* Card Header Subtitle */
+.card-header span {
+  font-size: 12px; /* Set font size for subtitle */
+  color: #777; /* Light color for subtitle */
+}
+
+/* Card Details */
+.card-details {
+  display: flex; /* Use flexbox for card details layout */
+  justify-content: space-between; /* Space out details */
+  align-items: center; /* Vertically align details */
+  margin-top: 10px; /* Margin on top of the details */
+}
+
+/* Card Detail Text */
+.card-details p {
+  margin: 0; /* Remove margin from paragraphs */
+  font-size: 14px; /* Set font size for details text */
+  color: #555; /* Light color for details text */
+}
+
+/* Employee Badge */
+.badge {
+  background-color: red; /* Red background color for badges */
+  padding: 5px 10px; /* Padding inside the badge */
+  border-radius: 20px; /* Rounded corners for the badge */
+  font-size: 12px; /* Font size for badge text */
+  font-weight: bold; /* Bold text inside the badge */
+}
+
+/* Project Card and Notes Card */
+.project-card, .notes-card {
+  border: 1px solid #ddd; /* Light border for the cards */
+  border-radius: 10px; /* Rounded corners for the cards */
+  padding: 15px; /* Padding inside the cards */
+  margin-bottom: 15px; /* Margin below the cards */
+  background: #fff; /* White background for the cards */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Project Card Header */
+.project-header {
+  display: flex; /* Use flexbox for project header layout */
+  justify-content: space-between; /* Space out the header items */
+  align-items: center; /* Vertically align header items */
+}
+
+/* Project Header Title */
+.project-header h3 {
+  margin: 0; /* Remove margin from header */
+  font-size: 18px; /* Set font size for project header */
+}
+
+/* Project Status Badge */
+.status {
+  background: #f0ad4e; /* Yellow background for status */
+  color: #fff; /* White text color for status */
+  padding: 5px 10px; /* Padding inside the badge */
+  border-radius: 5px; /* Rounded corners for the badge */
+  font-size: 12px; /* Font size for status text */
+}
+
+/* Notes Card List */
+.notes-card ul {
+  list-style: none; /* Remove bullet points */
+  padding: 0; /* Remove padding from list */
+}
+
+/* Notes Card List Item */
+.notes-card li {
+  margin-bottom: 10px; /* Margin below each note item */
+}
+
+/* Note Label */
+.note-label {
+  background: #ff6f61; /* Red background for note labels */
+  color: #fff; /* White text color for note labels */
+  font-size: 12px; /* Font size for note labels */
+  padding: 3px 8px; /* Padding inside the label */
+  border-radius: 5px; /* Rounded corners for the label */
+  margin-right: 10px; /* Margin to the right of the label */
+}
+
+/* Main Title */
+.main h1{
+  font-size: 90px; /* Set large font size for main title */
+}
+
+/* Styling for the button */
+.btn {
+    display: inline-block; /* Ensure the button behaves like a block element */
+    margin-top: 1rem; /* Add space between the text and the button */
+    text-decoration: none; /* Remove underline from the link */
+    color: #fff; /* White text color */
+    padding: 0.5rem 1rem; /* Spacing inside the button */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #405766; /* Button background color */
+    transition: background-color 0.3s; /* Smooth transition effect for hover */
+}
+
+/* Hover effect for the button */
+.btn:hover {
+    background-color: #007AFF; /* Slightly darker shade on hover */
+}
+/* Performance page */
+
+#attendanceLeavePerformanceBarChart {
+  width: 100%;  /* Make the canvas responsive */
+  height: 500px; /* Set the height as needed */
+  margin: 20px auto;
+}
+
+    .performance-canvas {
+        width: 100%;  /* Scale to fill the available width */
+        height: 500px; /* Set the height as per your preference */
+        margin: 20px auto;
+    }
+
+    .performance-chart-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .performance-chart {
+        width: 300px;
+        height: 300px;
+    }
+
+    .performance {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+
+  h1 {
+      color: #405766;
+      margin-bottom: 25px;
+      font-size: 1.8rem;
+      /* border-bottom: 2px solid #405766; */
+      padding: 5px;
+    }
+
+  .performance-h2 {
+      color: #007bff;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      border-bottom: 2px solid #405766;
+      padding-bottom: 5px;
+      padding-top: 70px;
+   }
+
+  #performance-review-form {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   }
+
+   .perform-label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+      color: #333;
+      text-align: left;
+   }
+
+  input[type="text"],
+  select,
+  textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 1rem;
+  }
+
+  textarea {
+      height: 100px;
+      resize: vertical;
+  }
+
+  .submit {
+      background-color: #405766;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto 0;
+      transition: background-color 0.3s;
+   }
+
+  .submit:hover {
+      background-color: #007bff;
+   }
+
+  #performance-review-status {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 1.2rem;
+   }
+
+  .chart-container {
+      margin-top: 40px;
+  }
+
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack the elements vertically on small screens */
+  }
+  .card {
+    max-width: 90%; /* Make cards take up 90% width on small screens */
+  }
+}
+
+@media (max-width: 600px){
+  .card-body{
+    grid-template-columns: 1fr; /* Stack grid elements in one column */
+    padding: 5px; /* Reduce padding for small screens */
+  }
+}
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1rem;
+  }
+  .card-body{
+    grid-template-columns: 1fr; /* Stack grid elements in one column */
+    padding: 5px; /* Reduce padding for small screens */
+  }
+  .employee-item {
+    padding: 0;
+  }
+}
+
+
+/* Adjust background size for aspect ratio */
+@media (min-aspect-ratio:16/9){
+  .background-clip{
+    width: 100%; /* Full width for background */
+    height: 100vh; /* Full height for background */
+  }
+}
+
+/* Adjust background size for smaller aspect ratios */
+@media (max-aspect-ratio:16/9){
+  .background-clip{
+    width: 100%; /* Full width for background */
+    height: 100vh; /* Auto height for background */
+  }
+}
+
+/* Responsive Grid Layout for Small Screens */
+@media (max-width: 600px) {
+  .parent,.card {
+    grid-template-columns: 1fr; /* Stack grid elements in one column */
+    padding: 10px; /* Reduce padding for small screens */
+  }
+}
+
+/* Footer Top Section on Smaller Screens */
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column; /* Stack footer items vertically */
+    text-align: center; /* Center-align the text */
+  }
+
+  .footer-info,
+  .footer-links,
+  .footer-social {
+    flex: 1 1 100%; /* Make sections take up full width */
+    margin-bottom: 20px; /* Margin below sections */
+  }
+
+  .footer-icon {
+    width: 30px; /* Smaller size for footer icons */
+    height: 30px; /* Smaller size for footer icons */
+  }
+}
+
+/* Responsive Footer Images */
+@media (max-width: 768px) {
+  .footer-images {
+    flex-direction: column; /* Stack images vertically */
+    gap: 10px; /* Smaller gap between images */
+  }
+
+  .footer-icon {
+    width: 30px; /* Smaller size for footer icons */
+    height: 30px; /* Smaller size for footer icons */
+  }
+}

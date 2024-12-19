@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Leave Data</title>
+    <!-- External Libraries and Styles -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- React Dependencies -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Add Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body { padding-top: 70px; } /* Add space for fixed navbar */
+        canvas {
+            width: 100%;
+            height: 500px;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar bg-body-tertiary fixed-top" style="background: linear-gradient(135deg, #405766,#ffffff, #5F7C8A, #ffffff);">
+        <img src="./images/icon.png" style="border: 2px solid #405766;" height="50px" alt="icon">
+        <a class="navbar-brand" href="#">ModernTech Solutions</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasNavbarLabel">ModernTech Solutions</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item"><a class="nav-link" href="dashboard.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="empolyee.html">Employee Data</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Attendance.html">Attendance</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="Leave.html">Leave</a></li>
+                    <li class="nav-item"><a class="nav-link" href="performance.html">Performance</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Employee Leave Days</h1>
+        <canvas id="leaveBarChart" width="1800" height="400"></canvas>
+        
+        <!-- React Root Element -->
+        <div id="leaveTableRoot"></div>
+    </div>
+
+    <!-- React Component -->
+    <script type="text/babel">
+        const EmployeeLeaveTable = () => {
+            const [leaveData, setLeaveData] = useState([
+                {"employeeId": 1, "hoursWorked": 160, "leaveDeductions": 8, "finalSalary": 69500, "status": null},
+                {"employeeId": 2, "hoursWorked": 150, "leaveDeductions": 10, "finalSalary": 79000, "status": null},
+                {"employeeId": 3, "hoursWorked": 170, "leaveDeductions": 4, "finalSalary": 54800, "status": null},
+                {"employeeId": 4, "hoursWorked": 165, "leaveDeductions": 6, "finalSalary": 59700, "status": null},
+                {"employeeId": 5, "hoursWorked": 158, "leaveDeductions": 5, "finalSalary": 57850, "status": null},
+                {"employeeId": 6, "hoursWorked": 168, "leaveDeductions": 2, "finalSalary": 64800, "status": null},
+                {"employeeId": 7, "hoursWorked": 175, "leaveDeductions": 3, "finalSalary": 71800, "status": null},
+                {"employeeId": 8, "hoursWorked": 160, "leaveDeductions": 0, "finalSalary": 56000, "status": null},
+                {"employeeId": 9, "hoursWorked": 155, "leaveDeductions": 5, "finalSalary": 61500, "status": null},
+                {"employeeId": 10, "hoursWorked": 162, "leaveDeductions": 4, "finalSalary": 57750, "status": null}
+            ]);
+
+            const handleAccept = (employeeId) => {
+                setLeaveData(leaveData.map(employee => 
+                    employee.employeeId === employeeId 
+                        ? { ...employee, status: employee.status === 'accepted' ? null : 'accepted' }
+                        : employee
+                ));
+            };
+
+            const handleReject = (employeeId) => {
+                setLeaveData(leaveData.map(employee => 
+                    employee.employeeId === employeeId 
+                        ? { ...employee, status: employee.status === 'rejected' ? null : 'rejected' }
+                        : employee
+                ));
+            };
+
+            return (
+                <div className="container mt-5 p-4">
+                    <h2 className="mb-4 text-2xl font-bold">Employee Leave Requests</h2>
+                    <table className="table table-striped w-full">
+                        <thead className="bg-gray-100">
+                            <tr>
+                                <th>Employee ID</th>
+                                <th>Hours Worked</th>
+                                <th>Leave Days</th>
+                                <th>Final Salary</th>
+                                <th>Actions</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {leaveData.map((employee) => (
+                                <tr key={employee.employeeId} className="border-b">
+                                    <td className="py-3">{employee.employeeId}</td>
+                                    <td>{employee.hoursWorked}</td>
+                                    <td>{employee.leaveDeductions}</td>
+                                    <td>${employee.finalSalary}</td>
+                                    <td className="space-x-2">
+                                        <button 
+                                            className={`px-4 py-2 rounded transition-colors duration-200 ${
+                                                employee.status === 'accepted'
+                                                    ? 'bg-green-700 text-white'
+                                                    : 'bg-green-500 hover:bg-green-600 text-white'
+                                            }`}
+                                            onClick={() => handleAccept(employee.employeeId)}
+                                            disabled={employee.status === 'rejected'}
+                                        >
+                                            Accept
+                                        </button>
+                                        <button 
+                                            className={`px-4 py-2 rounded transition-colors duration-200 ${
+                                                employee.status === 'rejected'
+                                                    ? 'bg-red-700 text-white'
+                                                    : 'bg-red-500 hover:bg-red-600 text-white'
+                                            }`}
+                                            onClick={() => handleReject(employee.employeeId)}
+                                            disabled={employee.status === 'accepted'}
+                                        >
+                                            Reject
+                                        </button>
+                                    </td>
+                                    <td>
+                                        {employee.status === 'accepted' && '✓'}
+                                        {employee.status === 'rejected' && '✗'}
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+            );
+        };
+
+        // Import React's useState
+        const { useState } = React;
+
+        // Render the component
+        ReactDOM.render(
+            <EmployeeLeaveTable />,
+            document.getElementById('leaveTableRoot')
+        );
+    </script>
+
+    <!-- Chart Script -->
+    <script>
+        // Create the bar chart
+        const ctx = document.getElementById('leaveBarChart').getContext('2d');
+        const leaveData = {
+            labels: Array.from({length: 10}, (_, i) => `Employee ${i + 1}`),
+            datasets: [{
+                label: 'Leave Days',
+                data: [8, 10, 4, 6, 5, 2, 3, 0, 5, 4],
+                backgroundColor: 'rgba(54, 162, 235, 0.5)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 1
+            }]
+        };
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: leaveData,
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: {
+                            display: true,
+                            text: 'Number of Leave Days'
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
